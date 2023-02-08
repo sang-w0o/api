@@ -1,0 +1,40 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: cloudforet-inventory-api
+  namespace: cloudforect-core
+  description: gRPC API for CloudForet Inventory Service
+spec:
+  type: grpc
+  lifecycle: experimental
+  owner: bluese@mz.co.kr
+  definition:
+    $text: ../proto/spaceone/api/inventory/*/*.proto
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: cloudforet-secret-api
+  namespace: cloudforect-core
+  description: gRPC API for CloudForet Secret Service
+spec:
+  type: grpc
+  lifecycle: experimental
+  owner: bluese@mz.co.kr
+  definition:
+    $text: ../proto/spaceone/api/secret/*/*.proto
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: cloudforet-identity-api
+  namespace: cloudforect-core
+  description: gRPC API for CloudForet Identity Service
+spec:
+  type: grpc
+  lifecycle: experimental
+  owner: whdalsrnt@mz.co.kr
+  definition:
+    $text: ../proto/spaceone/api/identity/*/*.proto
+---
+
